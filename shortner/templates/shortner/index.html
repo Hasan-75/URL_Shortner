@@ -1,0 +1,52 @@
+{% extends 'shortner/template.html' %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>{% block title %}Shortner{% endblock %}</title>
+
+</head>
+
+<body>
+
+<!-- Navigation -->
+{% block navigation %} {% include 'shortner/nav.html' %} {% endblock %}
+
+{% block body %}
+    {% if shortened %}
+        {% include 'shortner/popup.html' with data=shortened title="Shortened URL" %}
+    {% endif %}
+    <!-- Masthead -->
+    {% include 'shortner/masterhead.html' %}
+
+    {% comment %}
+    <!-- Icons Grid -->
+    {% include 'shortner/iconGrid.html' %}
+
+    <!-- Image Showcases -->
+    {% include 'shortner/showcase.html' %}
+
+    <!-- Testimonials -->
+    {% include 'shortner/testimonials.html' %}
+
+    <!-- Call to Action -->
+    {% include 'shortner/callToAction.html' %}
+    {% endcomment %}
+
+{% endblock %}
+
+
+</body>
+
+{% block js %}
+    {% if shortened %}
+        <script>
+            $(document).ready(function () {
+                $("#popup").modal('show');
+            });
+        </script>
+    {% endif %}
+{% endblock %}
+
+</html>

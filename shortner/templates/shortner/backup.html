@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Landing Page - Start Bootstrap Theme</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="{% static 'shortner/vendor/bootstrap/css/bootstrap.min.css'%}" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="{% static 'shortner/vendor/fontawesome-free/css/all.min.css'%}" rel="stylesheet">
+  <link href="{% static 'shortner/vendor/simple-line-icons/css/simple-line-icons.css' %}" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+  <!-- Custom styles for this template -->
+  <link href="{% static 'shortner/css/landing-page.css' %}" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  {% include 'shortner/nav.html' %}
+
+  <!-- Masthead -->
+  {% include 'shortner/masterhead.html' %}
+
+  <!-- Icons Grid -->
+  {% include 'shortner/iconGrid.html' %}
+
+  <!-- Image Showcases -->
+  {% include 'shortner/showcase.html' %}
+
+  <!-- Testimonials -->
+  {% include 'shortner/testimonials.html' %}
+
+  <!-- Call to Action -->
+  {% include 'shortner/callToAction.html' %}
+
+  <!-- Footer -->
+  {% include 'shortner/footer.html' %}
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="{% static 'shortner/vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'shortner/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+</body>
+
+</html>
