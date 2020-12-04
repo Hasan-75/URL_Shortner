@@ -1,3 +1,4 @@
+djangorestframework
 Django
 gunicorn
 django-heroku
