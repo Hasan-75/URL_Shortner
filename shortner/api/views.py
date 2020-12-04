@@ -5,8 +5,9 @@ from rest_framework.response import Response
 
 from shortner.api.serializers import ShortenSerializer
 from shortner.utils import save_object
+from django.views.decorators.csrf import csrf_exempt
 
-
+@csrf_exempt
 @api_view(['POST'])
 def api_shorten(request):
     if request.method == 'POST':
